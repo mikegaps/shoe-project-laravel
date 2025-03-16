@@ -23,14 +23,19 @@
                         <h1 style="font-weight: bold;">User Profile</h1>
 
                        
-                        <div class="mt-6" style="display: flex; align-items: center;">
-                            <img style="border-radius: 50%;" src="{{ $user->profile_image ? asset('storage/' . $user->profile_image) : asset('images/default-profile.png') }}" alt="Profile Image" width="100px" height="100px" class="rounded-circle">
+                        <div class="mt-6 mb-6" style="display: flex; align-items: center;">
+                            <img src="{{ $user->profile_image ? asset('storage/' . $user->profile_image) : asset('images/default-profile.png') }}" alt="Profile Image" style="border-radius: 75px; 
+                                                                                object-fit: fill; 
+                                                                                height: 150px; 
+                                                                                width: 150px;
+                                                                                border: 2px solid black">
                             <h5>
                                 <span style="font-size: 30px; margin-left: 20px; font-weight: bolder;">
                                     {{ $user->name }}
                                 </span>
                             </h5>
                         </div>
+                        <hr>
                         <div class="mt-6">
                             <h5><b>Email:</b> <u>{{ $user->email }}</u></h5>
                             <h5><b>Phone:</b> {{ $user->phone }}</h5>
