@@ -15,7 +15,7 @@
         </div>
     </div>
 
-    <div class="py-1">
+    <div class="pb-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
@@ -24,10 +24,10 @@
 
                        
                         <div class="mt-6 mb-6" style="display: flex; align-items: center;">
-                            <img src="{{ $user->profile_image ? asset('storage/' . $user->profile_image) : asset('images/default-profile.png') }}" alt="Profile Image" style="border-radius: 75px; 
+                            <img src="{{ $user->profile_image ? asset('storage/' . $user->profile_image) : asset('images/default-profile.png') }}" alt="Profile Image" style="border-radius: 60px; 
                                                                                 object-fit: fill; 
-                                                                                height: 150px; 
-                                                                                width: 150px;
+                                                                                height: 120px; 
+                                                                                width: 120px;
                                                                                 border: 2px solid black">
                             <h5>
                                 <span style="font-size: 30px; margin-left: 20px; font-weight: bolder;">

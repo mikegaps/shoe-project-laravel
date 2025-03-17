@@ -8,7 +8,7 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $user = Auth::user(); // Fetch all users (change this to the relevant table)
+        $user = Auth::user(); // para isang user lang ang pwede ilagay sa dashboard
         
         return view('dashboard', compact('user'));
     }

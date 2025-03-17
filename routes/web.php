@@ -19,4 +19,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::fallback(function () {
+    return response()->json(['message' => 'Route not found'], 404);
+});
+
 require __DIR__.'/auth.php';
