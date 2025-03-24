@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
+use Illuminate\Support\Facades\Request;
+use Illuminate\Cache\RateLimiting\Limit;
 
 class LoginRequest extends FormRequest
 {
@@ -82,4 +84,11 @@ class LoginRequest extends FormRequest
     {
         return Str::transliterate(Str::lower($this->string('email')).'|'.$this->ip());
     }
+
+    public function boot()
+{
+    RateLimiter::for('auth.login', function (Request $request) {
+        return Limit::perMinute(5)->by($request->ip());
+    });
+}
 }
