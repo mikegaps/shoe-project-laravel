@@ -14,7 +14,7 @@ class ShoeController extends Controller
     public function index()
     {
         $shoes = Shoes::all();
-        return view("shoes", compact("shoes"));
+        return view("index", compact("shoes"));
     }
 
     /**
@@ -22,7 +22,7 @@ class ShoeController extends Controller
      */
     public function create()
     {
-        //
+        return view ("create");
     }
 
     /**

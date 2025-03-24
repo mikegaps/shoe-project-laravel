@@ -38,7 +38,7 @@
                             {{ __('Profile') }}
                         </x-dropdown-link>
 
-                        <x-dropdown-link :href="route('shoes.index')">
+                        <x-dropdown-link :href="route('shoes.create')">
                             {{ __('Sell your Shoes!') }}
                         </x-dropdown-link>
 
